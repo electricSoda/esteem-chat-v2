@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Classroom Chatterbox</title>
+  <link rel='icon' href='Esteem Group.png'>
+  <link rel='stylesheet' href='styles.css'>
+  <meta name="description" content="Esteem Chat">
+  <meta name="author" content="Esteem">
+  <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p><b>Tutorial on the functionalities of this chat:</b></p><hr><p>
+              1. To send a message, simply press enter in the message box to send your message, or press the "Send" button.<hr>
+              2. To quickly bail out of the chat room to avoid detection of wrongdoing, simply press the button that says "⚠BAIL".<hr>
+              3. To access more functions, click on the 3 dots, which you have already figured out. <hr>
+              4 - IMPORTANT. On of the extra functions, it says, "Disconnect". Please press this when you need to go, or want to exit this website. If you don't do this, the other users will become confused because they will think you are still in the chat room.<hr>
+              5. Another extra function is to send links. To send a link, press the "Send a Link" button. It will show a popup, which you will need to enter your link into. Please format the link as follows: "http://url.com/".<hr>
+              6. Extra function 3: You can play fun games with your friends. Simply press "Play a Game With Your Friends", and then you will be redirected to a Unity WebGL game that you and your friends can play on. Your friends will know when to join you because when you press the button, a message is sent to everyone that you have opened the game.<hr>
+              7. This is not really a function, but just a resource. This is button redirects you to the main Esteem Corporation site for you to access more of our products. Press "Main Site" to do this. <hr>
+          </p>
+          <img src='greatday.jpg'>
+        </div>  
+      </div>
+    <div id='chat'>
+        <ul id="messages"></ul>
+        <p id='typemessages'></p>
+        <form id="form" action="">
+        <input id="input" autocomplete="off" placeholder='Message'>
+        <button id='submit'>Send</button>
+        <p class='divider'>    |    </p>
+        <button id='bail'>
+            ⚠BAIL
+        </button>
+        <div id='drop-container' class='drop-container'>
+            <button id='jeffreylul' class='dropdown'></button>
+            <div id='je' class='content jeff'>
+                <a href='https://electricsoda.github.io/esteemsite' id='main'>Main Site</a>
+                <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' id='play'>Play a Game With Your Friends!</a>
+                <a href='javascript:void(0);' id='how'>How to Use This Chat</a>
+                <a href='javascript:void(0);' id='link'>Send A Link</a>
+                <a href='javascript:void(0);' id='dis'>Disconnect</a>
+            </div>
+        </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src='chat.js'></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </div>
+</body>
+</html>

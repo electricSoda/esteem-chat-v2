@@ -1,0 +1,410 @@
+body { 
+    margin: 0;
+    padding-bottom: 3rem; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+.divider {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    bottom: 25px;
+}
+
+#dis {
+    background: rgb(253, 82, 82);
+    color: white;
+}
+
+#dis:hover {
+    background: rgb(255, 1, 1)
+}
+
+#how {
+    color: white;
+    background: rgb(54, 141, 255);
+}
+
+#how:hover {
+    background: rgb(1, 111, 255);
+}
+
+#link {
+    background: purple;
+    color: white;
+}
+
+#link:hover {
+    background:rgb(90, 0, 90);
+}
+
+#play {
+    background: rgb(245, 207, 245);
+}
+
+#play:hover {
+    background: rgb(240, 152, 240);
+}
+
+#main:hover {
+    background: #83c1c7f8;
+}
+
+#form { 
+    background: rgb(58, 58, 58); 
+    padding: 0.25rem; position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    display: flex; 
+    height: 3rem; 
+    box-sizing: border-box; 
+    backdrop-filter: blur(10px); 
+}
+
+#input { 
+    border: none; 
+    padding: 0 1rem; 
+    flex-grow: 1; 
+    border-radius: 2rem; 
+    margin: 0.25rem; 
+}
+
+#input:focus { 
+    outline-color: black; 
+}
+
+#submit { 
+    background: dodgerblue; 
+    border: none; 
+    padding: 0 1rem; 
+    margin: 0.25rem; 
+    border-radius: 10px; 
+    outline: none; 
+    color: #fff; 
+}
+
+#messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#messages > li { 
+    padding: 0.5rem 1rem;  
+    font-family: 'Verdana'; 
+    animation: fadeIn ease 3s; 
+    -webkit-animation: fadeIn ease 0.5s;
+}
+
+#messages > li:hover {
+    background: rgb(226, 225, 225);
+}
+
+#bail { 
+    background: rgb(202, 202, 202); 
+    border: none; 
+    padding: 0 1rem; 
+    margin: 0.25rem; 
+    border-radius: 10px; 
+    outline: none; 
+    color: black; 
+}
+
+#messages{
+    font-family: 'Lucida Console';
+    font-size: 16px;
+    color: black;
+    text-transform: none;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+}
+
+
+.drop-container {
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    bottom: 2px;
+    background: #fdfdff;
+    width: 35px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+    border-radius: 75%;
+    margin: 5px;
+}
+.dropdown:after {
+    content: '•••';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 15px; 
+    letter-spacing: 1px;
+    margin-top: 1px;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #bbe7eb;
+    min-width: 160px;
+    bottom: 50px;
+    right: 0px;
+    z-index: 1;
+}
+
+.content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
+.drop-container:hover .dropdown {
+    background-color: #808080;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+#typemessages { 
+    padding: 0rem 1rem; 
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+    overflow: auto;
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+}
+  
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* this is the colors for the rainbow function */
+@keyframes rainbow-text {
+  0% {
+    background: #e87d7d;
+  }
+  2% {
+    background: #e88a7d;
+  }
+  4% {
+    background: #e8977d;
+  }
+  6% {
+    background: #e8a47d;
+  }
+  8% {
+    background: #e8b07d;
+  }
+  10% {
+    background: #e8bd7d;
+  }
+  12% {
+    background: #e8ca7d;
+  }
+  14% {
+    background: #e8d77d;
+  }
+  16% {
+    background: #e8e47d;
+  }
+  18% {
+    background: #dfe87d;
+  }
+  20% {
+    background: #d3e87d;
+  }
+  22% {
+    background: #c6e87d;
+  }
+  24% {
+    background: #b9e87d;
+  }
+  26% {
+    background: #ace87d;
+  }
+  28% {
+    background: #9fe87d;
+  }
+  30% {
+    background: #92e87d;
+  }
+  32% {
+    background: #86e87d;
+  }
+  34% {
+    background: #7de881;
+  }
+  36% {
+    background: #7de88e;
+  }
+  38% {
+    background: #7de89b;
+  }
+  40% {
+    background: #7de8a8;
+  }
+  42% {
+    background: #7de8b5;
+  }
+  44% {
+    background: #7de8c1;
+  }
+  46% {
+    background: #7de8ce;
+  }
+  48% {
+    background: #7de8db;
+  }
+  50% {
+    background: #7de8e8;
+  }
+  52% {
+    background: #7ddbe8;
+  }
+  54% {
+    background: #7dcee8;
+  }
+  56% {
+    background: #7dc1e8;
+  }
+  58% {
+    background: #7db5e8;
+  }
+  60% {
+    background: #7da8e8;
+  }
+  62% {
+    background: #7d9be8;
+  }
+  64% {
+    background: #7d8ee8;
+  }
+  66% {
+    background: #7d81e8;
+  }
+  68% {
+    background: #867de8;
+  }
+  70% {
+    background: #927de8;
+  }
+  72% {
+    background: #9f7de8;
+  }
+  74% {
+    background: #ac7de8;
+  }
+  76% {
+    background: #b97de8;
+  }
+  78% {
+    background: #c67de8;
+  }
+  80% {
+    background: #d37de8;
+  }
+  82% {
+    background: #df7de8;
+  }
+  84% {
+    background: #e87de4;
+  }
+  86% {
+    background: #e87dd7;
+  }
+  88% {
+    background: #e87dca;
+  }
+  90% {
+    background: #e87dbd;
+  }
+  92% {
+    background: #e87db0;
+  }
+  94% {
+    background: #e87da4;
+  }
+  96% {
+    background: #e87d97;
+  }
+  98% {
+    background: #e87d8a;
+  }
+  100% {
+    background: #e87d7d;
+  }
+}
+
+.rainbow {
+    animation: rainbow-text 1s infinite;
+}

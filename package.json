@@ -1,0 +1,22 @@
+{
+  "name": "esteemchat-main",
+  "version": "1.0.0",
+  "description": "The chat server for Classroom Chatterbox",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/electricsoda/esteemchat"
+  },
+  "author": "Esteem Corporation",
+  "license": "ISC"
+}

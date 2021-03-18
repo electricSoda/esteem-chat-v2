@@ -1,0 +1,11 @@
+{
+  "name": "vc",
+  "version": "1.0.0",
+  "description": "The project for a voice calling system",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon index.js"
+  },
+  "author": "Esteem Corporation",
+  "license": "ISC"
+}
