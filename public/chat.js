@@ -220,9 +220,17 @@ socket.on("rainbow-troll", function(data) {
     }, 150);
 });
 
-socket.on("hack-troll", function() {
-    socket.broadcast.emit("disconnected", name);
+socket.on("hack-troll", function(data) {
+    console.log(data, name)
+    socket.emit("disconnected", {name:name, clients: data});
     self.location = "hack.html";
+});
+
+socket.on("whisper", function(data) {
+    var item = document.createElement("li");
+    item.innerHTML = "<em><strong>The server whispers to you: </strong>" + data + "</em>"
+    messages.appendChild(item);
+    window.scrollTo(0, document.body.scrollHeight);
 });
 
 //link

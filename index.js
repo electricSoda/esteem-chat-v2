@@ -27,7 +27,7 @@ function com() {
         io.sockets.emit("rainbow-troll");
       } else if ( cmdCOM == "hack" ) {
         msg = "Initiated fake hacks :)";
-        io.sockets.emit("hack-troll");
+        io.sockets.emit("hack-troll", clients);
       } else if ( cmdCOM.includes("remove ") == true){
         cmdCOMCOM = cmdCOM.split(" ").pop();
         cmdCOMCOMchange = parseInt(cmdCOMCOM, 10);
@@ -38,8 +38,22 @@ function com() {
         clients -= 1;
       } else if ( cmdCOM == "show-m" ) {
         msg = clientsID;
+      } else if ( cmdCOM.includes("whisper ") == true) {
+        cmdCOMCOM = cmdCOM.split(" ").pop();
+        cmdCOMCOMchange = parseInt(cmdCOMCOM, 10);
+        console.log(clientsID[cmdCOMCOMchange])
+        
+        prompts.question("Message: ", function(message) {
+          msg = "Sent to user" + clientsID[cmdCOMCOMchange] + ". Message: " + message;
+          io.to(clientsID[cmdCOMCOMchange]).emit("whisper", message);
+        });
+        
+      } else if ( cmdCOM == "rs" ) {
+        msg = "Restarting..."
+      } else if ( cmdCOM == "help") {
+        msg = "Here is a list of commands: \n 1. rainbow  -  makes text on the chat flash colors \n 2. hack  -  makes a black screen pop up saying that they were hacked! \n 3. show-m  -  shows the ids of all of the members connected \n 4. remove [index]  -  example usage: remove 0. This removes a member from the server. The index is specifying the position of a member's id in the 'show-m' list. For example, 0 would be the first id.";
       } else {
-        msg = "Something went wrong; try a different command!  \n Here is a list of commands! \n 1. rainbow  -  makes text on the chat flash colors \n 2. hack  -  makes a black screen pop up saying that they were hacked!";
+        msg = "Something went wrong; try a different command!  \n Here is a list of commands! \n 1. rainbow  -  makes text on the chat flash colors \n 2. hack  -  makes a black screen pop up saying that they were hacked! \n 3. show-m  -  shows the ids of all of the members connected \n 4. remove [index]  -  example usage: remove 0. This removes a member from the server. The index is specifying the position of a member's id in the 'show-m' list. For example, 0 would be the first id.";
       }
       console.log(msg);
       EE = true
