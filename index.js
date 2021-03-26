@@ -56,6 +56,7 @@ function com() {
         msg = "Something went wrong; try a different command!  \n Here is a list of commands! \n 1. rainbow  -  makes text on the chat flash colors \n 2. hack  -  makes a black screen pop up saying that they were hacked! \n 3. show-m  -  shows the ids of all of the members connected \n 4. remove [index]  -  example usage: remove 0. This removes a member from the server. The index is specifying the position of a member's id in the 'show-m' list. For example, 0 would be the first id.";
       }
       console.log(msg);
+      prompts.close()
       EE = true
       com()
     });
